@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Permanent Marker', cursive;
+    
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(./images/BG02.png);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px 10px 50px;
+    width: 100%;
+    max-width: 1000px;
+    font-size: 2rem;
+    color: #004e88;
+
+    background: rgba(255, 255, 255, 0.423);
+    border-radius: 16px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(2px);
+    border: 2px solid #4882ae;
+}
+
+
+main img{
+  height: 200px;
+  padding-bottom: 50px;
+  }
+
+.grid{
+    display: grid;
+    width: 100%;
+    max-width: 1000px;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 15px;
+    margin: 50px auto;
+    
+}
+
+.player {
+    font-family: 'Patrick Hand', cursive;
+    color: #1f191a;
+}
+
+.timer {
+    font-family: 'Patrick Hand', cursive;
+    color: #1f191a;
+
+}
+
+.card {
+    width: 100%;
+    aspect-ratio: 3/4;    
+    background-color: blueviolet;
+    border-radius: 10px;
+    position: relative;
+    transition: all 400ms ease;
+    transform-style: preserve-3d;
+
+}
+
+.face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    border: 2px solid #9d74a0;
+    
+}
+
+.front {
+
+    transform: rotateY(180deg);
+}
+
+
+.back{
+    background-image: url(./images/stitchlogo.png);
+    backface-visibility: hidden;
+}
+
+
+.reveal-card { 
+    transform: rotateY(180deg);
+
+}
+
+.disabled-card{
+    filter: saturate();
+}
